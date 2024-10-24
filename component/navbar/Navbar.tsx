@@ -9,6 +9,7 @@ function Navbar() {
   return (
     <ul>
         <Link href="/"> Home </Link>
+        <Link href="/admin"> Admin </Link>
         <Link href="/dashboard"> <li>AdminDashboard</li> </Link>
         <Link href="/clubs"> <li>Clubs</li> </Link>
         <Link href="/events"> <li>Events</li>  </Link>
