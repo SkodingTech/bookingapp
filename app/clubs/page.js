@@ -4,6 +4,7 @@ import React from 'react'
 import { useSession } from 'next-auth/react'
 import { redirect } from 'next/navigation'
 import UserCard from '../components/UserCard'
+import Denied from '../denied/page'
 
 function ClubsPage() {
     const { data: session } = useSession({
@@ -13,9 +14,11 @@ function ClubsPage() {
         }
     })
 
-    if (session?.user.role !== "admin") {
-        return <h1 className="text-5xl">Access Denied</h1>
-    }
+    // if (session?.user.role !== "admin") {
+    //     return <h1 className="text-5xl">
+    //         <Denied/>
+    //     </h1>
+    // }
 
     if (!session?.user) return
 
