@@ -22,8 +22,8 @@ export const options = {
         // to verify with credentials
 
         const users = [
-          { id: "45", name: "kavya", password: "nextauth", role: "superadmin" },
-          { id: "48", name: "kavyakc", password: "kc", role: "admin" },
+          { id: "1", name: "admin", password: "nextauth", role: "admin" },
+          { id: "2", name: "user", password: "user", role: "user" },
           // Add more users here...
         ];
 
