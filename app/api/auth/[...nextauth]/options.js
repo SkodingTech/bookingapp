@@ -23,7 +23,7 @@ export const options = {
 
         const users = [
           { id: "1", name: "admin", password: "nextauth", role: "admin" },
-          { id: "2", name: "user", password: "user", role: "user" },
+          { id: "2", name: "superadmin", password: "user", role: "superadmin" },
           // Add more users here...
         ];
 
