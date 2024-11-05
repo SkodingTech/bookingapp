@@ -162,7 +162,7 @@
 
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useUser } from '../../context/UserContext'
 
@@ -174,7 +174,11 @@ function UserTable() {
   const [editingUserId, setEditingUserId] = useState(null);
   const [newRole, setNewRole] = useState('');
 
-  
+  useEffect(() => {
+    console.log('Users changed:', users);
+    // Any side effects here
+  }, [users]);
+
 
   const startEditing = (userId, currentRole) => {
     setEditingUserId(userId);

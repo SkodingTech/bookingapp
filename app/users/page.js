@@ -20,14 +20,15 @@ if (!session?.user) return
 return (
 
     
-    <UserProvider>        
+        
     <section className="flex flex-col gap-6">
+         <UserProvider>   
         {/* <UserCard user={session?.user} pagetype={"Users"} /> */}
         <UserTable/>
-        
+        </UserProvider>
     </section>
 
-</UserProvider>
+
     
 
 )

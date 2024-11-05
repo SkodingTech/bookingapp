@@ -18,6 +18,12 @@ export default withAuth(
     ) {
       return NextResponse.rewrite(new URL("/denied", request.url));
     }
+    if (
+      request.nextUrl.pathname.startsWith("/") &&
+      request.nextauth.token?.role !== "superadmin" && request.nextauth.token?.role !== "admin"
+    ) {
+      return NextResponse.rewrite(new URL("/login", request.url));
+    }
 
 
   },
@@ -34,6 +40,6 @@ export default withAuth(
 // Ref: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
 // export const config = { matcher: [ "/clubs", "/"] };
 
-export const config = { matcher: ["/clubs/:path*","/"] };
+export const config = { matcher: ["/clubs/:path*"] };
 
 

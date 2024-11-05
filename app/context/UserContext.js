@@ -51,6 +51,7 @@ export function UserProvider({ children }) {
   ]);
 
   const addUser = (newUser) => {
+    console.log('Adding new user:', newUser);
     setUsers((prevUsers) => [...prevUsers, newUser]);
   };
 
