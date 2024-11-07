@@ -9,9 +9,9 @@ export default withAuth(
 
     const role = request.nextauth.token?.role;
 
-    if (request.nextUrl.pathname.startsWith("/clubs") && role !== "superadmin") {
-      return NextResponse.rewrite(new URL("/denied", request.url));
-    }
+    // if (request.nextUrl.pathname.startsWith("/clubs") && role !== "superadmin") {
+    //   return NextResponse.rewrite(new URL("/denied", request.url));
+    // }
 
   
   },
